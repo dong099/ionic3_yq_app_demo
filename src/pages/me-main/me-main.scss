@@ -1,0 +1,81 @@
+page-me-main {
+
+
+    ion-card {
+        position: relative;
+        text-align: center;        
+      }
+
+      .capImg {
+        //max-width: 100%;
+        //border-radius: 30%;
+        //height: 40px;
+        //width: 100%;  
+        opacity:0.4;
+        filter:alpha(opacity=40); /* 针对 IE8 以及更早的版本 */
+      }
+
+
+ 
+      //absolute 100%, center
+      .user_name {
+        position: absolute;
+        font-size: 1.5em;
+        text-align: center;
+        height: 84px;
+        font-weight: bold;
+        top: 10%;       
+        color: rebeccapurple;     
+        width: 100%;   
+      }
+
+      //relative to parent
+      .user_img { 
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        border-radius: 20%;
+    }
+
+
+      .created_date{
+        color: rebeccapurple;
+        position: absolute;
+        font-weight: bold;
+        top: 90%;
+        left:5%;
+
+
+      }
+
+      .user_loc{
+        color: rebeccapurple;
+        position: absolute;
+        font-weight: bold;
+        top: 5%;
+        left:5%;        
+      }
+
+      .imgCard {
+        position: relative;
+        text-align: center;
+      }
+
+      .imgTitle {
+        width: 100%;
+        font-weight: bold;
+         
+      }
+
+      .numDiv {
+        font-weight: bold;
+        height:30px;
+        color: #488aff!important;
+      }  
+
+      ion-card-header {
+        color: rebeccapurple!important;
+        //text-align: left!important;
+      }
+}

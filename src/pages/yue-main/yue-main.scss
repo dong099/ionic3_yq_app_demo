@@ -1,0 +1,120 @@
+page-yue-main {
+
+    ion-content {
+        //background-color: #f4f4f4!important; 
+    }
+
+    ion-card {
+        //width: 100%!important;
+    }
+
+    .divCls {
+        //padding: 2px 0px  2px 0px ; //up right, bottom left
+    }
+
+    .avatar{
+        text-align: center;
+
+    }
+
+
+
+      .imgCard {
+        position: relative;
+        text-align: center;
+      }
+
+      .imgTitle {
+        //position: absolute;
+        //top: 30%;
+        width: 100%;
+        color: blue;
+        text-decoration: underline;
+      }
+
+      div {
+        font-weight: bold;   
+      }
+
+      .capImg {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        //border-radius: 30%; 
+      }  
+
+    .pos {
+        width: 20px;
+        height: 20px;
+        margin-bottom: -4px;
+    }
+
+    .fakeBaisc {
+        color: #fff;
+        position: relative;
+        display: block;
+        line-height: 32px;
+        height: 32px;
+        font-size: 13px; 
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .fakeLab {
+        padding-right: 12px; 
+        //width: 45px;
+        align-content: center;
+    }
+
+    .fakeInput {
+        background: rgba(255,255,255,.55); 
+        width: 100%; 
+        border-radius: 3px; 
+    }
+     
+     
+
+
+    .arrowIcon {
+        position: absolute;
+        width: 7px;
+        height: 4px;
+        right: 4px;
+        top: 50%;
+        margin-top: -2px;
+        background: url(../assets/imgs/h_icons.png) no-repeat;
+        background-size: 36px auto;
+        background-position: -7px 0;
+    }
+
+    .qry_icon {
+        color: #fff;
+        float: left;
+        width: 14px;
+        height: 14px;
+        margin: 9px 10px 0 11px;
+        background: url(../assets/imgs/h_icons.png) -14px -4px no-repeat;
+        //background: url(./home_h_icons.png) 0 -4px no-repeat;
+        //background-position: -14px -4px;
+        background-size: 36px auto;
+    }
+
+    .right-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20px;
+        height: 12px;
+        background: url(../assets/imgs/adv.png) no-repeat;
+        background-size: 100%;
+        margin: 10px 6px 0;
+    }
+
+
+    ion-note {
+        font-size: 11px;
+        align-self: flex-start;
+        //margin-top: 30px;
+      }
+}

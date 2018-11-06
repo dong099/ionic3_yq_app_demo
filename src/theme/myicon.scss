@@ -1,0 +1,71 @@
+
+  .ion-ios-compete:before {
+    content: url("../assets/imgs/compete.png");
+  }
+  .ion-ios-compete-outline:before {
+    content: url("../assets/imgs/compete-outline.png");
+  }
+  .tab-button[aria-selected=true] .ion-md-compete:before {
+    content: url("../assets/imgs/compete.png");
+  }
+  .tab-button[aria-selected=false] .ion-md-compete:before {
+    content: url("../assets/imgs/compete-outline.png");
+  }
+  
+
+  ////////////////////////////////////////////////////////////
+
+  .ion-ios-field:before {
+    content: url("../assets/imgs/field.png");
+  }
+  .ion-ios-field-outline:before {
+    content: url("../assets/imgs/field-outline.png");
+  }
+  .tab-button[aria-selected=true] .ion-md-field:before {
+    content: url("../assets/imgs/field.png");
+  }
+  .tab-button[aria-selected=false] .ion-md-field:before {
+    content: url("../assets/imgs/field-outline.png");
+  }
+
+
+
+  .ion-ios-commu:before {
+    content: url("../assets/imgs/commu.png");
+  }
+  .ion-ios-commu-outline:before {
+    content: url("../assets/imgs/commu-outline.png");
+  }
+  .tab-button[aria-selected=true] .ion-md-commu:before {
+    content: url("../assets/imgs/commu.png");
+  }
+  .tab-button[aria-selected=false] .ion-md-commu:before {
+    content: url("../assets/imgs/commu-outline.png");
+  }
+
+
+  .ion-ios-profile:before {
+    content: url("../assets/imgs/profile.png");
+  }
+  .ion-ios-profile-outline:before {
+    content: url("../assets/imgs/profile-outline.png");
+  }
+  .tab-button[aria-selected=true] .ion-md-profile:before {
+    content: url("../assets/imgs/profile.png");
+  }
+  .tab-button[aria-selected=false] .ion-md-profile:before {
+    content: url("../assets/imgs/profile-outline.png");
+  }
+
+  .ion-ios-add_y:before {
+    content: url("../assets/imgs/add_y.png");
+  }
+  .ion-ios-add_y-outline:before {
+    content: url("../assets/imgs/add_y-outline.png");
+  }
+  .tab-button[aria-selected=true] .ion-md-add_y:before {
+    content: url("../assets/imgs/add_y.png");
+  }
+  .tab-button[aria-selected=false] .ion-md-add_y:before {
+    content: url("../assets/imgs/add_y-outline.png");
+  }

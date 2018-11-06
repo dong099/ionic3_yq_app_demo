@@ -1,0 +1,23 @@
+<ion-header>
+
+    <ion-toolbar>
+   
+  
+      <ion-title> 
+        地图模式
+      </ion-title>
+  
+      <ion-buttons end>
+        <button ion-button (click)="confirmBack()" strong>返回</button>
+      </ion-buttons>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div  >
+        <ion-icon name="radio-button-on" class="position-btn" tappable (click)="mapLocation()"></ion-icon>
+      </div>
+    <div #mapDiv class="map-share" ></div>  
+</ion-content>

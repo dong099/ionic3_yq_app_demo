@@ -1,0 +1,21 @@
+page-map-search {
+    .map-share{
+        height:100%;
+        width: 100%;
+      }
+
+
+    .position-btn {
+        position: absolute;
+       left: 5px;
+        bottom: 20px;
+        z-index: 999;
+        font-size: 22px;
+        padding: 3px 5px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        color: #666;
+      }
+
+}

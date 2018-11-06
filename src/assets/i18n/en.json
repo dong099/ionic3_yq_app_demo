@@ -1,0 +1,17 @@
+{
+    "TITLE": "Welcome To {{value}}",
+    "HINT": "Select your language",
+    "HOME": "HOME",
+    "LEARN": "LEARN",
+    "FOUND": "FOUND",
+    "MY": "MY",
+    "CANCEL": "CANCEL",
+    "OK": "OK",
+    "REQUIRED": "Required",
+
+    "ERROR_BANG": "Sorry, operation failed!",
+    "SUCCESS_BANG": "Operation is successful!",
+
+    "Login.username":"User Name",
+    "Login.password":"Password"
+  }

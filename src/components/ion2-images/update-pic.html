@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title >
+      设置图像
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()">关闭</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+ 
+
+
+<ion-content padding text-center>
+  
+  <div class="avatar">
+      <img [src]="avatarPath"  >
+  </div>
+
+  <div padding-top>
+    <button ion-button block color="light" (click)="getPicture(0)">从相册选一张</button>
+  </div>
+  <div padding-top>
+    <button ion-button block color="light" (click)="getPicture(1)">拍一张照片</button>
+  </div>
+  <div padding-top>
+    <button type="button" ion-button block (click)="saveAvatar()">保 存</button>
+  </div>
+</ion-content>

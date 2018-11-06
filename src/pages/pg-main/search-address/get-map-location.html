@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+          <button ion-button (click)="dismiss()">关闭</button>
+    </ion-buttons>
+    <ion-title>地址定位</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="confirmBack()">确定</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div *ngIf="mapIsComplete&&!isPositioning">
+    <ion-icon name="radio-button-on" class="position-btn" tappable (click)="mapLocation()"></ion-icon>
+  </div>
+
+  <ion-item no-lines>
+    <ion-icon name='search' item-start style="color: #d03e84"></ion-icon>
+    <ion-input readonly="false" readonly="true" type="text" placeholder="Search..." [(ngModel)]="params.address" (click)="locationSearch()"></ion-input>
+  </ion-item>
+
+  <div id="map-share" class="map-share noPadding"></div>
+
+</ion-content>

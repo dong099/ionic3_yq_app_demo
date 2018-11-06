@@ -1,0 +1,150 @@
+{
+    "context": {
+        "headers": {
+            "Access-Control-Allow-Origin": [
+                "*"
+            ]
+        },
+        "entity": {
+            "oidIndex": 0,
+            "versionId": 0,
+            "lastUpdTime": "2018-01-18 13:54:31",
+            "name": "闵行体育馆 ",
+            "addr": "那条路 1010",
+            "tel": "021-88888888",
+            "city": "上海",
+            "district": "xuhui",
+            "geoPoint": "121.370846,31.143152",
+            "shortDesc": "1",
+            "pgImgUrl": null,
+            "description": "1",
+            "thumbNum": 0,
+            "commentsNum": 0,
+            "createdBy": {
+                "oidIndex": 0,
+                "versionId": 0,
+                "lastUpdTime": "2017-12-28 18:00:30",
+                "username": "李四",
+                "openid": "openidxxxxxxx",
+                "nickName": "小李",
+                "sex": "",
+                "language": "CN",
+                "city": "1",
+                "province": "1",
+                "country": "1",
+                "headImgUrl": "a.png",
+                "subscribeDate": "2017-12-19",
+                "telNo": "1",
+                "briefDesc": "1",
+                "email": "1",
+                "ip": "1",
+                "bsDetail": "1",
+                "password": "qQzZSMrCeoOA2iTKPXsalQ=="
+            },
+            "createdDate": null
+        },
+        "entityType": "com.yq.main.model.YqPlayground",
+        "entityAnnotations": [],
+        "entityStream": {
+            "closed": false,
+            "committed": false
+        },
+        "length": -1,
+        "language": null,
+        "location": null,
+        "lastModified": null,
+        "date": null,
+        "entityTag": null,
+        "links": [],
+        "stringHeaders": {
+            "Access-Control-Allow-Origin": [
+                "*"
+            ]
+        },
+        "entityClass": "com.yq.main.model.YqPlayground",
+        "lengthLong": -1,
+        "mediaType": null,
+        "committed": false,
+        "acceptableMediaTypes": [
+            {
+                "type": "*",
+                "subtype": "*",
+                "parameters": {},
+                "quality": 1000,
+                "wildcardSubtype": true,
+                "wildcardType": true
+            }
+        ],
+        "allowedMethods": [],
+        "responseCookies": {},
+        "acceptableLanguages": [
+            "*"
+        ],
+        "requestCookies": {}
+    },
+    "status": 200,
+    "length": -1,
+    "language": null,
+    "location": null,
+    "lastModified": null,
+    "date": null,
+    "statusInfo": "OK",
+    "entityTag": null,
+    "links": [],
+    "stringHeaders": {
+        "Access-Control-Allow-Origin": [
+            "*"
+        ]
+    },
+    "entity": {
+        "oidIndex": 0,
+        "versionId": 0,
+        "lastUpdTime": "2018-01-18 13:54:31",
+        "name": "闵行体育馆 ",
+        "addr": "那条路 1010",
+        "tel": "021-88888888",
+        "city": "上海",
+        "district": "xuhui",
+        "geoPoint": "121.370846,31.143152",
+        "shortDesc": "1",
+        "pgImgUrl": null,
+        "description": "1",
+        "thumbNum": 0,
+        "commentsNum": 0,
+        "createdBy": {
+            "oidIndex": 0,
+            "versionId": 0,
+            "lastUpdTime": "2017-12-28 18:00:30",
+            "username": "李四",
+            "openid": "openidxxxxxxx",
+            "nickName": "小李",
+            "sex": "",
+            "language": "CN",
+            "city": "1",
+            "province": "1",
+            "country": "1",
+            "headImgUrl": "a.png",
+            "subscribeDate": "2017-12-19",
+            "telNo": "1",
+            "briefDesc": "1",
+            "email": "1",
+            "ip": "1",
+            "bsDetail": "1",
+            "password": "qQzZSMrCeoOA2iTKPXsalQ=="
+        },
+        "createdDate": null
+    },
+    "mediaType": null,
+    "metadata": {
+        "Access-Control-Allow-Origin": [
+            "*"
+        ]
+    },
+    "cookies": {},
+    "allowedMethods": [],
+    "headers": {
+        "Access-Control-Allow-Origin": [
+            "*"
+        ]
+    }
+}

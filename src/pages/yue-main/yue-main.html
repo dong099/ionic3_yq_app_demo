@@ -1,0 +1,134 @@
+<!--
+  Generated template for the YueMainPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-auto>
+          <span class="fakeBaisc fakeLab" (click)="gotoCitySearch()">{{cityCode}}
+            <span class="arrowIcon"></span>
+          </span>
+        </ion-col>
+        <ion-col>
+          <span class="fakeBaisc fakeInput" (click)="gotoYueSearch()">
+            <span class="qry_icon"></span>搜索文本
+            <span class="right-icon"></span>
+          </span>
+        </ion-col>
+        <ion-col col-auto>
+          <button ion-button class="fakeBaisc" clear icon-only no-margin (click)="onLogin()">
+            <ion-icon name='contact' [style]="loginColor"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 class="avatar">
+        <div class="imgCard">
+          <img class="capImg" src="assets/imgs/all_y.png" (click)="getListFromDb('a')">
+          <div [class]="getMenu('a')" >所有活动</div>
+        </div>
+      </ion-col>
+      <ion-col col-4 class="avatar">
+
+        <div class="imgCard">
+          <img class="capImg" src="assets/imgs/mine_y.png" (click)="getListFromDb('b')">
+          <div  [class]="getMenu('b')">我的约球</div>
+        </div>
+
+      </ion-col>
+      <ion-col col-4 class="avatar">
+
+        <div class="imgCard">
+          <img class="capImg" src="assets/imgs/mine_y2.png" (click)="getListFromDb('c')">
+          <div  [class]="getMenu('c')" >我的应约</div>
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <!--ion-list-header>Today</ion-list-header-->    
+    <ion-list-header no-lines  [hidden]="itemList && itemList.length > 0"  style="text-align:center" >
+      {{pageStatusMsg}}
+    </ion-list-header>
+
+
+  <ion-card *ngFor="let i of itemList">
+    <ion-item>
+      <ion-avatar item-start>
+        <img-lazy-load [src]="getAvatar(i.yueUid.headImgUrl)"  (autoClick)="checkUserProfile(i.yueUid.oidIndex)"></img-lazy-load>
+      </ion-avatar>
+      <h2>{{i.yueUid.nickName}}, {{i.yueTid?.teamName}}  <ion-icon color="google" *ngIf="i.yueTid" name='people' ></ion-icon> </h2>
+      <h3 >{{convertCatCd(i.activityCat)}}, {{i.yuePid.name}}    
+        <img class="pos" src="assets/icon/position2.png" (click)="goPos(i.yuePid)">
+      </h3>
+
+      <ion-note item-end>{{i.datePub}}</ion-note>
+    </ion-item>
+
+    <ion-card-content>
+      <p>{{i.title}} - {{i.description}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="addFav(i)">
+          <ion-icon name="thumbs-up"></ion-icon>
+          <p>{{i.thumbNum}}</p>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="gotoComments(i.oidIndex, $event)">
+          <ion-icon name="text"></ion-icon>
+          <p>{{i.commentsNum}} </p>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="goYue(i.oidIndex)">
+          <ion-icon name="list"></ion-icon>
+          <p>详情 </p>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  </ion-list>
+
+  <ion-fab bottom right #fab>
+    <button ion-fab color="facebook">
+      <ion-icon name="share"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab color="vimeo" (click)="wechatLogin(1,fab)">
+        <ion-icon name="chatbubbles"></ion-icon>
+      </button>
+      <button ion-fab color="google" (click)="goToUrl(fab)">
+        <ion-icon name="home"></ion-icon>
+      </button>
+      <button ion-fab color="vibrant" (click)="goToTutorial(fab)">
+        <ion-icon name="appstore"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

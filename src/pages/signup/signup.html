@@ -1,0 +1,90 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+
+		</button>
+		<ion-title>用户信息</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content class="login-page">
+	<div class="logo">        
+		<img [src]="avatarPath"   (click)="updatePic()">
+		 
+	</div>
+
+	<form #signupForm="ngForm" novalidate  >
+		<ion-list  inset >
+			<ion-item  *ngIf="!signup.oidIndex">
+				<ion-label   >用<var></var>户<var></var>名*</ion-label>
+				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" (blur)="validateUserName()" required>
+				</ion-input>
+			</ion-item>
+ 
+
+			<ion-item *ngIf="signup.oidIndex==null">
+				<ion-label   >密<em></em>码*</ion-label>
+				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
+				</ion-input>
+			</ion-item>
+ 
+
+			<ion-item>
+				<ion-label  >昵<em></em>称*</ion-label>
+				<ion-input [(ngModel)]="signup.nickName" name="nickName" type="text" #nickName="ngModel" required>
+				</ion-input>
+			</ion-item>
+
+
+			<ion-item no-padding>
+				<ion-label >性<em></em>别</ion-label>
+				<ion-select float-right [(ngModel)]="signup.sex" name="sex" multiple="false"  [disabled]="previewFlag"  #sex="ngModel" interface="popover">
+						<ion-option value="male" >男</ion-option>
+						<ion-option value="female" >女</ion-option>
+				</ion-select>
+			</ion-item>
+
+			<ion-item>
+				<ion-label  >电<em></em>话</ion-label>
+				<ion-input [(ngModel)]="signup.telNo" name="telNo" type="text" #telNo="ngModel" >
+				</ion-input>
+			</ion-item>
+
+			<ion-item style="overflow:visible;contain:none;">
+				<ion-label  >城<em></em>市</ion-label>
+				<auto-comp-util keyword="{{signup.city}}" (itemSelected)="getSelect($event)"  placeholder="输入并选择" type="text"  useIonInput="true"   item-content   [dataProvider]="autoCompleteProvider"> </auto-comp-util>
+			
+			</ion-item>
+	 
+
+			<ion-item>
+				<ion-label    >邮件地址*</ion-label>
+				<ion-input [(ngModel)]="signup.email" name="email" placeholder="忘记密码时候用" type="email" #email="ngModel" required></ion-input>
+			</ion-item>
+
+			<ion-item>
+					<ion-label  >自我介绍</ion-label>
+					<ion-textarea [(ngModel)]="signup.briefDesc" placeholder="Enter a description" name="description"></ion-textarea>
+			</ion-item>
+
+			<ion-item *ngIf="previewFlag">
+					<ion-label  >注册日期</ion-label>
+					<ion-input   [(ngModel)]="signup.subscribeDate"   readonly="true" name="subscribeDate" type="text"  >
+						</ion-input>
+			</ion-item>
+
+
+
+
+
+		</ion-list>
+
+		<div padding *ngIf="!previewFlag">
+			<button ion-button (click)="onSignup(signupForm)" [disabled]="!signupForm.valid"  type="submit" block>保 存</button> 
+			 
+
+		</div>
+	</form>
+</ion-content>

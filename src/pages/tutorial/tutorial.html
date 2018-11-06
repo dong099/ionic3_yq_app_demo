@@ -1,0 +1,48 @@
+<ion-header no-border>
+ 
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary" clear>跳过</button>
+    </ion-buttons>
+ 
+</ion-header>
+
+
+
+<ion-content  no-bounce >
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+
+    <ion-slide>
+      <p>[非真实app, 研究测试专用]</p>
+      <img src="assets/imgs/s0.png" class="slide-image" style="width:70%!important;"/>
+      <h2 class="slide-title">
+        爱运动， 我要约球
+      </h2>
+       
+    </ion-slide>
+
+    <ion-slide>
+        <p>[非真实app, 研究测试专用]</p>
+      <img src="assets/imgs/s1.png" class="slide-image" style="width:100%!important;"/>
+      <h2 class="slide-title" >有激情，开心投入 </h2>
+       
+    </ion-slide>
+
+    <ion-slide>
+        <p>[非真实app, 研究测试专用]</p>
+      <img src="assets/imgs/s3.png" class="slide-image" style="width:70%!important;"/>
+      <h2 class="slide-title">爱健康， 坚持与锻炼</h2>
+       
+    </ion-slide>
+
+    <ion-slide>
+        <p>[非真实app, 研究测试专用]</p>
+      <img src="assets/imgs/s4.png" class="slide-image" style="width:100%!important;"/>
+      <h2 class="slide-title">交球友， 来51约球</h2>
+      <button ion-button icon-end large clear (click)="startApp()">
+        进入
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

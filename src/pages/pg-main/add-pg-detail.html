@@ -1,0 +1,79 @@
+<!--
+  Generated template for the AddPgDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>场地信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  no-padding>
+
+  	<div class="logo">        
+        <img [src]="avatarPath"   (click)="updatePic()">
+         
+      </div>
+
+    <form #pgForm="ngForm" (ngSubmit)="doPg(pgForm)">
+
+        <ion-list>
+    
+          <ion-item  >
+            <ion-label>场地名称*</ion-label>
+            <ion-input type="text" [(ngModel)]="formOpt.name"  maxlength=50 name="name" #name="ngModel"  required  ></ion-input>
+          </ion-item>
+    
+
+    
+    
+          <ion-item>
+              <ion-label  >电<em></em>话</ion-label>
+              <ion-input [(ngModel)]="formOpt.tel" name="tel" type="text" #telNo="ngModel" >
+              </ion-input>
+          </ion-item>
+      
+          <ion-item style="overflow:visible;contain:none;">
+              <ion-label  >城<em></em>市</ion-label>
+              <auto-comp-util keyword="{{formOpt.city}}" (itemSelected)="getSelect($event)"  placeholder="输入并选择" type="text"  useIonInput="true"   item-content   [dataProvider]="autoCompleteProvider"> </auto-comp-util>
+            
+          </ion-item>
+    
+         
+    
+          <ion-item >
+              <ion-label>地<em></em>址*</ion-label>
+              <ion-input type="text" [(ngModel)]="formOpt.addr" maxlength=100  name="addr" #addr="ngModel" readonly="true" class="inputT" required  (click)="getGeo();" ></ion-input>
+            </ion-item>
+
+          <ion-item>
+              <ion-label>坐<em></em>标*</ion-label>
+              <ion-input type="text" [(ngModel)]="formOpt.geoPoint" name="geoPoint" #geoPoint="ngModel" readonly="true" required></ion-input>
+            </ion-item>
+    
+          <ion-item>
+            <ion-label>简短介绍*</ion-label>
+            <ion-input [(ngModel)]="formOpt.shortDesc" type="text" #shortDesc="ngModel" name="shortDesc"   required></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label>具体描述</ion-label>
+            <ion-textarea [(ngModel)]="formOpt.description" placeholder="Enter a description" name="description"></ion-textarea>
+          </ion-item>
+    
+    
+    
+          <div padding>
+            <button ion-button   [disabled]="!pgForm.valid"   type="submit" block>提交</button>
+    
+          </div>
+    
+        </ion-list>
+      </form>
+
+</ion-content>

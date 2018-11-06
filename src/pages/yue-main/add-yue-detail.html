@@ -1,0 +1,81 @@
+<!--
+  Generated template for the AddYueDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>约球信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <form #yueForm="ngForm" (ngSubmit)="doYue(yueForm)">
+
+    <ion-list>
+
+      <ion-item *ngIf="formOpt.yueUid">
+        <ion-label>发<var></var>起<var></var>人</ion-label>
+        <ion-input type="text" [(ngModel)]="formOpt.yueUid.username"  name="username"    readonly="true" ></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label>团<em></em>队</ion-label>
+        <ion-input type="text" [ngModel]="formOpt.yueTid?.teamName"   name="team_name"  readonly="true" class="inputT" (click)="getTeam();"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label>活动类型*</ion-label>
+        <ion-select [selectOptions]="actCatOpts" [(ngModel)]="formOpt.activityCat"  name="activity_cat" cancelText="取消" okText="确认" required>
+          <ion-option *ngFor="let o of actCats" [value]="o.code">{{o.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>场<em></em>地*</ion-label>
+        <ion-input type="text" [(ngModel)]="formOpt.yuePid.name" name="pid_name" class="inputT" readonly="true" (click)="getPg();" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>开始日期*</ion-label>
+        <ion-datetime [(ngModel)]="formOpt.dateFrom" name="date_from" displayFormat="YYYY-MM-DD" required></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>开始时间</ion-label>
+        <ion-datetime displayFormat="HH:mm"  [(ngModel)]="formOpt.timeSpan" name="timeSpan" pickerFormat="HH:mm"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>结束日期*</ion-label>
+        <ion-datetime [(ngModel)]="formOpt.dateTo" displayFormat="YYYY-MM-DD" name="date_to" required></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>活动主题*</ion-label>
+        <ion-input [(ngModel)]="formOpt.title" type="text" name="title"   required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>具体描述</ion-label>
+        <ion-textarea [(ngModel)]="formOpt.description" placeholder="Enter a description" name="description"></ion-textarea>
+      </ion-item>
+
+
+
+      <div padding>
+        <button ion-button   [disabled]="!yueForm.valid" color="danger" type="submit" block>提交</button>
+
+      </div>
+
+    </ion-list>
+  </form>
+
+
+</ion-content>

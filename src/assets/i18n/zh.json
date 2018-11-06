@@ -1,0 +1,17 @@
+{
+    "TITLE": "欢迎使用{{value}}",
+    "HINT": "请选择语言",
+    "HOME": "首页",
+    "LEARN": "学习",
+    "FOUND": "发现",
+    "MY": "我的",
+    "CANCEL": "取消",
+    "OK": "确认",
+    "REQUIRED": "必填",
+
+    "ERROR_BANG": "对不起,操作失败了!",
+    "SUCCESS_BANG": "操作成功!",
+    
+    "Login.username":"用户名",
+    "Login.password":"密码"
+}

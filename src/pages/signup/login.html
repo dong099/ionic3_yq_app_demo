@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-navbar >
+      <button ion-button menuToggle  >
+          <ion-icon name="menu"></ion-icon>
+  
+      </button>
+      <ion-title>登陆</ion-title>
+    </ion-navbar>
+    
+  </ion-header>
+  
+  <ion-content class="login-page">
+      <div class="logo">
+          <img src="assets/imgs/avatar.png" alt="请上传自己的图像">
+      </div>
+  
+    <form #loginForm="ngForm" novalidate> 
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label floating color="primary">用户名</ion-label>
+          <ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" required>
+          </ion-input>
+        </ion-item>
+        <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+          用户名不可为空
+        </p>
+  
+        <ion-item>
+          <ion-label floating color="primary">密码</ion-label>
+          <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+          </ion-input>
+        </ion-item>
+        <p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+          密码不可为空
+        </p>
+      </ion-list>
+  
+      <ion-row >
+          <ion-col>
+            <button ion-button (click)="onLogin(loginForm)" type="submit" block>登陆</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button (click)="onSignup()" color="light" block>注册</button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col >
+            <button ion-button (click)="wechatLogin(0)" type="submit" item-end icon-left clear>
+              <ion-icon name="chatbubbles" color="secondary"></ion-icon>
+              微信登陆
+            </button>
+          
+            <button ion-button (click)="forgetPwd()" type="submit" item-end icon-left clear>
+              <ion-icon name="bulb" color="secondary"></ion-icon>
+               忘记密码
+            </button>
+          </ion-col>
+        </ion-row>
+
+
+    </form>
+  </ion-content>

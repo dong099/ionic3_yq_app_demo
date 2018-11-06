@@ -1,0 +1,31 @@
+<!--
+  Generated template for the AccountPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>当前用户信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div padding-top text-center class="logo"> 
+        <img [src]="avatarPath" (click)="showBigImg()">
+        <h2>    {{username}}</h2>
+    
+        <ion-list >
+          <button ion-item (click)="updatePic()">更新头像</button>
+          <button ion-item (click)="updateUser()">修改基础资料</button>
+          <button ion-item (click)="changePassword()">修改密码</button>
+    
+        </ion-list>
+      </div>
+</ion-content>

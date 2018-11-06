@@ -4,7 +4,9 @@
 
 
 ###个别页面
-![splash](./screenshots/splash.png) 
+![splash](./screenshots/splash.png)
 ![profile](./screenshots/profile.png)
-![home](./screenshots/home.png) 
-![map_search](./screenshots/map_search.png)  
+![home](./screenshots/home.png)
+![map_search](./screenshots/map_search.png)
+
+## 说明 ##

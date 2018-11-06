@@ -4,7 +4,7 @@
 
 
 ###个别页面
-![splash](./screenshots/splash.jpg) 
-![profile](./screenshots/profile.jpg)
-![home](./screenshots/home.jpg) 
-![map_search](./screenshots/map_search.jpg)  
+![splash](./screenshots/splash.png) 
+![profile](./screenshots/profile.png)
+![home](./screenshots/home.png) 
+![map_search](./screenshots/map_search.png)  
